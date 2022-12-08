@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ 
+    <link rel="stylesheet" href="assets/css/style1.css" />
+    <title>Sign in & Sign up To TRANSFERMONEY</title>
+    <link href="assets/img/Opera_Instantané_2022-04-14_214845_www.google.com-removebg-preview.png" rel="icon">  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+<!-----
+  how to prevent browser from going back to login form page once user is logged in
+--> 
+<script type="text/javascript">
+function prevenBack(){window.history.forward()};
+setTimeout("prevenBack()",0);
+window.onunload=function(){null;}
+   </script>
+  </head>
+  <body>
+ 
+   
+    <div class="container">
+
+ 
+      <div class="forms-container">
+        <div class="signin-signup">
+          <form action="\codershiyar\Squadfree\service\ocr-bac-et-login-bac.php"  method="POST" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="EMAIL"  required/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="PASSWORD" required/>
+            </div>
+            <br></br>
+            <input type="submit" name="login" value="sign in" class="btn solid" />
+            <p class="social-text">Or Sign in with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="\codershiyar\Squadfree\service\ocr-bac-et-login-bac.php"  method="POST" class="sign-up-form">
+            <br></br>
+            <h2 class="title">Sign up</h2>
+      <!----     <div class ="input-field placeholder ">
+              <i class="fas fa-id-card"></i>
+            <input  id="txt" type = "text" value = "Click & enter your National Identify Card"   placeholder="Click & enter your National Identify Card"
+          onclick ="javascript:document.getElementById('file').click();">
+         <input  id = "file" type="file" style='visibility: hidden;' name="image" onchange="ChangeText(this, 'txt');"/>
+
+</div>---->
+
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="NAME" required />
+            </div>
+  
+            <div class="input-field">
+              <i class="fas fa-id-card"></i>
+              <input type="text" placeholder="National Identify" name="ID_NATIONAL" required />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" name="EMAIL"  required/>
+            </div>
+          
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="PASSWORD" required />
+            </div>
+           
+            <br>
+            <div class="arrow">
+              <label for="language">Gender</label>
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+            <input type="radio" name="GENDER" value="male"  > Male   &nbsp; &nbsp;
+            <input type="radio" name="GENDER" value="female" > Female
+          </div >
+          
+ 
+            <input type="submit"  name="register"class="btn" value="Sign up" />
+            <p class="social-text">Or Sign up with social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+          <br></br>
+            <h3>Hello, Friend!</h3>
+            <p>
+              Enter your personal details and start journey with us
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+       <div>
+         <a href="index.php">
+         <button class="btn ">
+          Back to home
+            </button>
+</a>
+       </div>
+            
+          </div>
+          <img src="" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>Welcome Back!</h3>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          
+            <div>
+            <a href="index.php">
+         <button class="btn ">
+          Back to home
+            </button>
+</a>
+       </div>
+          </div>
+          <img src="" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+   
+    
+    
+
+    <script
+          src="https://kit.fontawesome.com/64d58efce2.js"
+          crossorigin="anonymous"
+        ></script>
+        
+
+    <script> sign_in_btn = document.querySelector("#sign-in-btn");
+    const sign_up_btn = document.querySelector("#sign-up-btn");
+    const container = document.querySelector(".container");
+
+    sign_up_btn.addEventListener("click", () => {
+      container.classList.add("sign-up-mode");
+    });
+
+    sign_in_btn.addEventListener("click", () => {
+      container.classList.remove("sign-up-mode");
+    });</script>
+
+
+  </body>
+</html>
